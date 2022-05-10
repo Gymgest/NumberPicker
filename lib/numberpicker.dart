@@ -276,10 +276,12 @@ class NumberPicker extends StatelessWidget {
           height: listViewHeight,
           width: listViewWidth,
           child: Stack(
+            alignment: Alignment.center,
             children: <Widget>[
               ListView.builder(
                 scrollDirection: scrollDirection,
                 controller: intScrollController,
+                padding: EdgeInsets.zero,
                 itemExtent: itemExtent,
                 itemCount: listItemCount,
                 cacheExtent: _calculateCacheExtent(listItemCount),
@@ -339,9 +341,11 @@ class NumberPicker extends StatelessWidget {
           height: listViewHeight,
           width: listViewWidth,
           child: Stack(
+            alignment: Alignment.center,
             children: <Widget>[
               ListView.builder(
                 controller: decimalScrollController,
+                padding: EdgeInsets.zero,
                 itemExtent: itemExtent,
                 itemCount: decimalItemCount,
                 itemBuilder: (BuildContext context, int index) {
