@@ -259,7 +259,7 @@ class NumberPicker extends StatelessWidget {
   Widget _integerListView(ThemeData themeData) {
     TextStyle? defaultStyle = textStyle ?? themeData.textTheme.bodyText2;
     TextStyle selectedStyle = selectedTextStyle ??
-        themeData.textTheme.headline5!.copyWith(color: themeData.accentColor);
+        themeData.textTheme.headline5!.copyWith(color: themeData.colorScheme.secondary);
 
     var listItemCount = integerItemCount + 2;
 
@@ -322,7 +322,7 @@ class NumberPicker extends StatelessWidget {
   Widget _decimalListView(ThemeData themeData) {
     TextStyle? defaultStyle = textStyle ?? themeData.textTheme.bodyText2;
     TextStyle selectedStyle = selectedTextStyle ??
-        themeData.textTheme.headline5!.copyWith(color: themeData.accentColor);
+        themeData.textTheme.headline5!.copyWith(color: themeData.colorScheme.secondary);
 
     int decimalItemCount = selectedIntValue == maxValue
         ? 3
@@ -385,7 +385,7 @@ class NumberPicker extends StatelessWidget {
   Widget _integerInfiniteListView(ThemeData themeData) {
     TextStyle? defaultStyle = textStyle ?? themeData.textTheme.bodyText2;
     TextStyle selectedStyle = selectedTextStyle ??
-        themeData.textTheme.headline5!.copyWith(color: themeData.accentColor);
+        themeData.textTheme.headline5!.copyWith(color: themeData.colorScheme.secondary);
 
     return Listener(
       onPointerUp: (ev) {
